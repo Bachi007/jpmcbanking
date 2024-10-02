@@ -28,7 +28,7 @@ export class DataService {
   }
 
   getCustomers(){
-    return this.http.get('http://localhost:4300/users/customers',{responseType:'json'});
+    return this.http.get('http://localhost:4300/users/allcustomers',{responseType:'json'});
   }
   getEmployees(){
     return this.http.get('http://localhost:4300/employees',{responseType:'json'});
