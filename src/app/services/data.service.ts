@@ -38,4 +38,8 @@ export class DataService {
     return this.http.get('http://localhost:4300/branch/'+id,{responseType:'json'});
   }
 
+  getTransactions(){
+    return this.http.get('http://localhost:4300/users/transactions',{responseType:'json'});``
+  }
+
 }

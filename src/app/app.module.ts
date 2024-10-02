@@ -15,13 +15,13 @@ import { EmpdashboardComponent } from './empdashboard/empdashboard.component';
 import { HistoryComponent } from './history/history.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { EmphomeComponent } from './emphome/emphome.component';
-
+import { NgChartsModule } from 'ng2-charts'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +44,7 @@ import { EmphomeComponent } from './emphome/emphome.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule,HttpClientModule
-  ],
+    AppRoutingModule, FormsModule,HttpClientModule,NgChartsModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })
