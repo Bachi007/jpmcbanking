@@ -13,8 +13,23 @@ export class TransactionComponent {
   amount:any;
   password:any;
   senderId:any;
-user:any;
+user:any;selectedImg:any;selectedmsg:any;
 constructor(private router:Router,private service:DataService){}
+
+  rewardsimgs=[
+    "assets/images/rewards/1.png",
+    "assets/images/rewards/2.png",
+    "assets/images/rewards/3.png",
+    "assets/images/rewards/4.jpeg",
+  ]
+
+  rewardmsg=["Congratulations! You have won a cashback of 10% on your transaction",
+    "Congratulations! You have won a cashback of 20% on your transaction",
+    "Congratulations! You have won a cashback of 30% on your transaction",
+    "Congratulations! You have won a cashback of 40% on your transaction",
+  ]
+
+
   ngOnInit(){
     if(localStorage.getItem('loginuser')==null)
     {
@@ -31,14 +46,21 @@ constructor(private router:Router,private service:DataService){}
       "senderId":this.senderId,
       "receiverId":this.recieverId,
       "amount":this.amount,
-      "password":this.password
+      "password":this.password 
   }
   console.log(this.user);
   this.service.sendAmount(this.user).subscribe((res:any)=>{
     alert(res.message);
-    this.router.navigateByUrl('/customer/home');
+    if(res.message=="Transaction successful"){
+      const randomIndex = Math.floor(Math.random() * this.rewardsimgs.length);
+      this.selectedImg = this.rewardsimgs[randomIndex];
+      this.selectedmsg = this.rewardmsg[randomIndex];
+    } 
+
   })
 }
-
+sendAgain(){
+  this.selectedImg = null;
+}
 
 }

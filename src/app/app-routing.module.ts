@@ -13,6 +13,8 @@ import { UserhomeComponent } from './userhome/userhome.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
+import { RewardsComponent } from './rewards/rewards.component';
+import { EmphomeComponent } from './emphome/emphome.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
   {path:'signup',component:RegistrationComponent},
   {path:'emp',component:EmpdashboardComponent,
     children:[
+      {path:'home',component:EmphomeComponent},
       {path:'employee',component:EmployeeComponent},
       {path:'customers',component:CustomersComponent},
       {path:'branches',component:BranchesComponent}
@@ -32,7 +35,8 @@ const routes: Routes = [
       {path:'history',component:HistoryComponent},
       {path:'home',component:UserhomeComponent},
       {path:'profile',component:ProfileComponent},
-      {path:'details',component:DetailsComponent}
+      {path:'details',component:DetailsComponent},
+      {path:'rewards',component:RewardsComponent}
     ]
   }
 ];

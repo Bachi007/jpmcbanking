@@ -5,7 +5,7 @@
             <h1>Transfer Amount</h1>
         </div>
     </div>
-        <div class="row">
+        <div class="row" *ngIf="!selectedImg">
         <div class="col-md-8">
         
             <form class="form" (ngSubmit)="sendAmount()">
@@ -72,4 +72,16 @@
 
         </div>
     </div>
+ 
+        <div class="row" *ngIf="selectedImg">
+            <div class="col-md-6">
+                <h1>Amount Transferred</h1>
+                <h3>You got reward</h3>
+                <div *ngIf="selectedImg">
+                    <p for="">{{selectedmsg}}</p>
+                    <img [src]="selectedImg" alt="Transaction Successful Image" class="img-fluid" />
+                  </div>
+                  <button (click)="sendAgain()">Send Again</button>
+            </div>
+        </div>
   </div>

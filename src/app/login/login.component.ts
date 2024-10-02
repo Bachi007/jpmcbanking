@@ -25,6 +25,7 @@ data:any;loginuser:any;
       this.data=res;
       if(this.data.message=="Login successful")
       {
+        console.log(this.data)
         if(this.data.role=="customer"){
           this.myrouter.navigateByUrl("/customer/home");
           this.loginuser = {
@@ -33,9 +34,7 @@ data:any;loginuser:any;
           }
           localStorage.setItem("loginuser",JSON.stringify(this.loginuser));
         }
-        else
-        {
-          if(this.data.role=="employee"){
+        else if(this.data.role=="employee"){
             this.myrouter.navigateByUrl("/emp/employee");
             this.user = {
               "username":this.data.employeeName,
@@ -43,18 +42,14 @@ data:any;loginuser:any;
             }
             localStorage.setItem("loginuser",JSON.stringify(this.user));
           }
-        }
+        
        
       }
-      console.log("User Info:", JSON.stringify(res));
-      this.userinfo=res;
- 
-
-        this.myrouter.navigateByUrl("/customer/home");
-        console.log(this.user);
-        console.table(this.userinfo);
-      
-    });
-    
+      else{
+        alert("Invalid credentials");      
+      }
+    }
+    )
   }
 }
+
