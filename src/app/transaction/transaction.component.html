@@ -11,8 +11,12 @@
             <form class="form" (ngSubmit)="sendAmount()">
                 <div class="input-block">
                     <input class="input" type="text" id="email" name="email" [(ngModel)]="recieverId" required="">
-                    <label for="email">Receiver Id</label>
+                    <label for="email">Receiver Account Num</label>
+                   
+                   
                 </div>
+                <a routerLink="/customer/details">Forgot Account Number ?</a>
+                   
                 <div class="input-block">
                     <input class="input" type="text" id="amt" name="amount" required="" [(ngModel)]="amount">
                     <label for="pass">Amount</label>

@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h1>Customers</h1>
         <button class="btn btn-primary br" data-bs-target="#mymodal" data-bs-toggle="modal">Create customer</button>
         <table class="table table-bordered table-hovered">
@@ -30,7 +30,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Create New Branch</h3>
+                <h3>Create New Customer</h3>
                 <button class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="form-control-label text-muted">Email</label>
+                                <label class="form-control-label text-muted">Mobile</label>
                                 <input
                                   type="text"
                                   id="mobile"
@@ -87,14 +87,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="form-control-label text-muted">Password</label>
+                                <label class="form-control-label text-muted">Aadhar</label>
                                 <input
-                                  type="password"
-                                  id="psw"
+                                  type="text"
+                                  id="aad"
                                   name="psw"
-                                  placeholder="Password"
+                                  placeholder="Aadhar Number"
                                   class="form-control"
-                                  [(ngModel)]="password"
                                   required
                                 />
                               </div>
@@ -167,32 +166,52 @@
                   
 
                     
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label text-muted">Password</label>
+                            <input
+                              type="password"
+                              id="psw"
+                              name="psw"
+                              placeholder="Password"
+                              class="form-control"
+                              [(ngModel)]="password"
+                              required
+                            />
+                          </div>
+                    </div>
 
-
-                  <div class="form-group">
-                    <label class="form-control-label text-muted"
-                      >Confirm Password</label
-                    >
-                    <input
-                      type="password"
-                      id="cpsw"
-                      name="cpsw"
-                      placeholder="Confirm Password"
-                      class="form-control"
-                      [(ngModel)]="confirmPassword"
-                      required
-                    />
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="form-control-label text-muted"
+                            >Confirm Password</label
+                          >
+                          <input
+                            type="password"
+                            id="cpsw"
+                            name="cpsw"
+                            placeholder="Confirm Password"
+                            class="form-control"
+                            [(ngModel)]="confirmPassword"
+                            required
+                          />
+                      </div>
                   </div>
+
+                 
   
                   <div class="row justify-content-center my-3 px-3">
                     <button
                       type="submit"
-                      class="btn btn-primary"
-                      [disabled]="signupForm.invalid" data-bs-dismiss="modal"
+                      class="btn-block btn-color"
+                      [disabled]="signupForm.invalid"
                     >
-                      Save Customer
+                      Signup to Swadesi Bank
                     </button>
                   </div>
+                  </div>
+                
                 </form>
                     </div>
                     </div>

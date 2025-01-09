@@ -21,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { EmphomeComponent } from './emphome/emphome.component';
-import { NgChartsModule } from 'ng2-charts'; 
+import { NgChartsModule } from 'ng2-charts';
+import { WhoweareComponent } from './whoweare/whoweare.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { NgChartsModule } from 'ng2-charts';
     ProfileComponent,
     DetailsComponent,
     RewardsComponent,
-    EmphomeComponent
+    EmphomeComponent,
+    WhoweareComponent
   ],
   imports: [
     BrowserModule,

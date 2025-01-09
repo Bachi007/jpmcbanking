@@ -18,11 +18,16 @@ export class EmphomeComponent {
       },
     },
   };
-
+stats:any;
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
     // Fetch transaction data
+
+    this.data.getStats().subscribe((res:any)=>{
+      this.stats=res;
+    })
+
     this.data.getTransactions().subscribe((res: any) => {
       this.transactionData = res;
 

@@ -1,36 +1,76 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <!-- Logo and Bank Name on the Left -->
-      <a class="navbar-brand" href="#">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/013/948/616/small_2x/bank-icon-logo-design-vector.jpg" alt="Bank Logo" width="50" height="50">
-        SecureWay Bank
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="">
+  
+    <a class="navbar-brand" href="#">
+      <img src="assets/mainlogo.png" alt="Bank Logo" width="70" height="70">
+      Swadesi Bank
+    </a>
 
-      <!-- Login Button on the Far Right -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <button class="btn btn-primary" routerLink="/login">Login</button>
-          </li>
-        </ul>
+    <ul class="mynav">
+      <li class="mynav-item me-3">
+        <a href="#who-we-are">Who We Are</a>
+        </li>
+      <li class="mynav-item me-3">
+        <a href="#rewards">Reward Policy</a>
+      </li>
+      <li class="mynav-item me-3">
+        <a routerLink="/login">Login</a>
+      </li>
+    </ul>
+  
+</nav>
+
+
+<div class=" myc">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/1.jpg" class="d-block w-100 h-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-  </nav>
 
-  <!-- Middle Section -->
-  <section class="middle">
-    <div class="container">
-      <h1>Welcome to SecureWay Bank</h1>
-      <p>Your trusted partner for secure and reliable banking services.</p>
-      <a href="#" class="btn btn-lg btn-light">Learn More</a>
-    </div>
-  </section>
 
-  <!-- Services Section -->
-  <section class="services">
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Middle Section -->
+
+<!-- Services Section -->
+<!-- <section class="services">
     <div class="container">
       <h2>Our Services</h2>
       <div class="row">
@@ -54,82 +94,62 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- This is Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <section id="who-we-are" class="who">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image Column -->
+            <div class="col-md-6">
+                <img src="assets/logo.png" class="img-fluid rounded" alt="Who We Are Image">
+            </div>
+            <!-- Text Column -->
+            <div class="col-md-6">
+                <h2>Who We Are</h2>
+                <p class="lead">
+                    At Swadeshi Bank, we are dedicated to empowering individuals and businesses with trusted financial services rooted in Indian values. Our mission is to provide innovative banking solutions that support local communities while fostering financial independence.
+                </p>
+                <p>
+                    With a focus on security, transparency, and sustainability, Swadeshi Bank is committed to promoting the Make in India initiative. We take pride in offering seamless, customer-centric services that support the growth of Indian brands and help create a financially inclusive future.
+                </p>
+            </div>
         </div>
-        <div class="modal-body">
-          <p>Select user type:</p>
-          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#employeeLoginModal" data-bs-dismiss="modal">Employee Login</button>
-          <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#customerLoginModal" data-bs-dismiss="modal">Customer Login</button>
-        </div>
-      </div>
     </div>
-  </div>
+</section>
 
-  <!-- This is Employee Login Modal -->
-  <div class="modal fade" id="employeeLoginModal" tabindex="-1" aria-labelledby="employeeLoginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="employeeLoginModalLabel">Employee Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="employeeEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="employeeEmail" required>
-            </div>
-            <div class="mb-3">
-              <label for="employeePassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="employeePassword" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-        </div>
+<section id="rewards" class="coup">
+  <div class="container">
+      <h2 class="text-center mb-4">Our Reward Policy</h2>
+      <div class="row">
+          <!-- Text Section -->
+          <div class="col-md-12">
+              <p class="lead">
+                  At Swadeshi Bank, we believe in rewarding our customers for their loyalty and support. As part of our commitment to promoting the <mark><b>Make in India</b></mark>initiative, we offer exclusive reward coupons for every transaction you make. These rewards can be redeemed at a wide range of Indian brands.
+              </p>
+              <p>
+                  Whether you're shopping for fashion, electronics, or handcrafted goods, our rewards give you the opportunity to support local businesses while enjoying significant savings. Discover how you can benefit from our reward program by clicking on the links below:
+              </p>
+              <ul>
+                  <li><a href="#" class="text-primary">10% Off on Indian Fashion Brands</a></li>
+                  <li><a href="#" class="text-primary">15% Off on Handmade Goods</a></li>
+                  <li><a href="#" class="text-primary">20% Off on Homegrown Electronics</a></li>
+              </ul>
+              <p>
+                  Start making your transactions today and experience the value of shopping locally with Swadeshi Bank!
+              </p>
+          </div>
       </div>
-    </div>
   </div>
+</section>
 
-  <!-- This is Customer Login Modal -->
-  <div class="modal fade" id="customerLoginModal" tabindex="-1" aria-labelledby="customerLoginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="customerLoginModalLabel">Customer Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="customerEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="customerEmail" required>
-            </div>
-            <div class="mb-3">
-              <label for="customerPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="customerPassword" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- this is Footer Section -->
-  <footer>
+<!-- this is Footer Section -->
+ <footer class="foo">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <h5>Contact Us</h5>
-          <p>Email: <code>SecureWay&copy;gmail.com</code> </p>
+          <p>Email: <code>swadesibank&copy;gmail.com</code> </p>
           <p>Phone: +91 9391165044</p>
         </div>
         <div class="col-md-4">
@@ -145,4 +165,4 @@
         <p>&copy; 2024 Thunder Bank. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  </footer> 

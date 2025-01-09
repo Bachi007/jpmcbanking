@@ -42,4 +42,8 @@ export class DataService {
     return this.http.get('http://localhost:4300/users/transactions',{responseType:'json'});``
   }
 
+  getStats(){
+    return this.http.get('http://localhost:4300/branches/stats',{responseType:'json'});
+  }
+
 }
